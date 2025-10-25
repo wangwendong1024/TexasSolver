@@ -9,7 +9,11 @@
 #include <QTextStream>
 #include <QDebug>
 #include "time.h"
-#include "unistd.h"
+#ifdef _WIN32
+#include <io.h>
+#else
+#include <unistd.h>
+#endif
 
 #define SUIT_0_MASK   0x1111111111111
 #define SUIT_1_MASK   0x2222222222222
@@ -51,15 +55,21 @@ void FiveCardsStrength::convert(unordered_map<uint64_t, int>& strength_map) {
     }
 }
 bool FiveCardsStrength::load(const char* file_path) {
-    //ifstream file(file_path, ios::binary);
-    /*if (!file) {
-        file.close();
+    qDebug() << "FiveCardsStrength::load called with file_path:" << file_path;
+    
+    if (!file_path || strlen(file_path) == 0) {
+        qDebug() << "ERROR: file_path is null or empty";
         return false;
-    }*/
-
-    QFile file(QString::fromStdString(file_path));
+    }
+    
+    QString qFilePath = QString::fromStdString(string(file_path));
+    qDebug() << "QString file path:" << qFilePath;
+    qDebug() << "File exists:" << QFile::exists(qFilePath);
+    
+    QFile file(qFilePath);
     if (!file.open(QIODevice::ReadOnly)){
-        throw runtime_error("unable to load compairer file");
+        qDebug() << "ERROR: Cannot open file:" << qFilePath;
+        return false;
     }
     flush_map.clear(); other_map.clear();
     int size_key = sizeof(uint64_t), size_int = sizeof(int), val, cnt = 0;
@@ -135,9 +145,21 @@ bool FiveCardsStrength::check(unordered_map<uint64_t, int>& strength_map) {
 }
 
 Dic5Compairer::Dic5Compairer(string dic_dir,int lines,string dic_dir_bin):Compairer(std::move(dic_dir),lines){
-    if(fcs.load(dic_dir_bin.c_str())) return;
+    qDebug() << "Dic5Compairer constructor called with:";
+    qDebug() << "  dic_dir:" << this->dic_dir.c_str();
+    qDebug() << "  dic_dir_bin:" << dic_dir_bin.c_str();
+    qDebug() << "  lines:" << lines;
+    
+    if(fcs.load(dic_dir_bin.c_str())) {
+        qDebug() << "Successfully loaded binary file:" << dic_dir_bin.c_str();
+        return;
+    }
+    
+    qDebug() << "Binary file load failed, trying text file:" << this->dic_dir.c_str();
     QFile infile(QString::fromStdString(this->dic_dir));
     if (!infile.open(QIODevice::ReadOnly)){
+        qDebug() << "ERROR: Cannot open file:" << this->dic_dir.c_str();
+        qDebug() << "File exists:" << QFile::exists(QString::fromStdString(this->dic_dir));
         throw runtime_error("unable to load compairer file");
     }
     QTextStream in(&infile);

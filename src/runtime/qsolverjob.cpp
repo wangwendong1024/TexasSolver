@@ -1,5 +1,7 @@
 ﻿#include "include/runtime/qsolverjob.h"
-
+#include <QDir>
+#include <QCoreApplication>
+#include <QFile>
 
 using namespace std;
 
@@ -43,23 +45,61 @@ void QSolverJob::run()
 void QSolverJob::loading(){
     string suits = "c,d,h,s";
     string ranks;
-    this->resource_dir =  ":/resources";
+    // Try to find resources directory
+    this->resource_dir = "./resources";
+    
+    // Check if resources directory exists in current working directory
+    if (!QDir(this->resource_dir.c_str()).exists()) {
+        // Try relative to executable directory
+        QString appDir = QCoreApplication::applicationDirPath();
+        QString resourcesPath = appDir + "/resources";
+        if (QDir(resourcesPath).exists()) {
+            this->resource_dir = resourcesPath.toStdString();
+        } else {
+            // Try relative to project directory (for development)
+            resourcesPath = appDir + "/../resources";
+            if (QDir(resourcesPath).exists()) {
+                this->resource_dir = resourcesPath.toStdString();
+            }
+        }
+    }
     string compairer_file, compairer_file_bin;
     int lines;
-    qDebug().noquote() << tr("Loading holdem compairing file");//.toStdString() << endl;
+    qDebug().noquote() << tr("Loading holdem compairing file");
+    qDebug().noquote() << "Resource directory:" << this->resource_dir.c_str();
     //if(mode == "holdem"){
     ranks = "2,3,4,5,6,7,8,9,T,J,Q,K,A";
     compairer_file = this->resource_dir + "/compairer/card5_dic_sorted.txt";
     compairer_file_bin = this->resource_dir + "/compairer/card5_dic_zipped.bin";
-    //qDebug().noquote() << compairer_file_bin.c_str();
+    
+    qDebug().noquote() << "Holdem compairer file:" << compairer_file.c_str();
+    qDebug().noquote() << "Holdem compairer bin file:" << compairer_file_bin.c_str();
+    
+    if (!QFile::exists(compairer_file.c_str())) {
+        qDebug().noquote() << "ERROR: Holdem compairer file not found:" << compairer_file.c_str();
+    }
+    if (!QFile::exists(compairer_file_bin.c_str())) {
+        qDebug().noquote() << "ERROR: Holdem compairer bin file not found:" << compairer_file_bin.c_str();
+    }
     lines = 2598961;
     this->ps_holdem = PokerSolver(ranks,suits,compairer_file,lines,compairer_file_bin);
 
-    qDebug().noquote() << tr("Loading shortdeck compairing file");//.toStdString() << endl;
+    qDebug().noquote() << tr("Loading shortdeck compairing file");
     //}else if(mode == "shortdeck"){
     ranks = "6,7,8,9,T,J,Q,K,A";
     compairer_file = this->resource_dir + "/compairer/card5_dic_sorted_shortdeck.txt";
     compairer_file_bin = this->resource_dir + "/compairer/card5_dic_zipped_shortdeck.bin";
+    
+    qDebug().noquote() << "Shortdeck compairer file:" << compairer_file.c_str();
+    qDebug().noquote() << "Shortdeck compairer bin file:" << compairer_file_bin.c_str();
+    
+    if (!QFile::exists(compairer_file.c_str())) {
+        qDebug().noquote() << "ERROR: Shortdeck compairer file not found:" << compairer_file.c_str();
+    }
+    if (!QFile::exists(compairer_file_bin.c_str())) {
+        qDebug().noquote() << "ERROR: Shortdeck compairer bin file not found:" << compairer_file_bin.c_str();
+    }
+    
     lines = 376993;
     this->ps_shortdeck = PokerSolver(ranks,suits,compairer_file,lines,compairer_file_bin);
     qDebug().noquote() << tr("Loading finished. Good to go.");//.toStdString() << endl;

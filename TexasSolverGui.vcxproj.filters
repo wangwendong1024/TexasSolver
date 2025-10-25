@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D38A0280}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Qt Files">
+      <UniqueIdentifier>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt Files\Generated Files">
+      <UniqueIdentifier>{B1C2D3E4-F5G6-7890-HIJK-LM1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt Files\Forms">
+      <UniqueIdentifier>{C1D2E3F4-G5H6-7890-IJKL-MN1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt Files\Resources">
+      <UniqueIdentifier>{D1E2F3G4-H5I6-7890-JKLM-NO1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Qt Files\Translations">
+      <UniqueIdentifier>{E1F2G3H4-I5J6-7890-KLMN-OP1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files">
+      <UniqueIdentifier>{F1G2H3I4-J5K6-7890-LMNO-PQ1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\compairer">
+      <UniqueIdentifier>{G1H2I3J4-K5L6-7890-MNOP-QR1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\experimental">
+      <UniqueIdentifier>{H1I2J3K4-L5M6-7890-NOPQ-RS1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\nodes">
+      <UniqueIdentifier>{I1J2K3L4-M5N6-7890-OPQR-ST1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\ranges">
+      <UniqueIdentifier>{J1K2L3M4-N5O6-7890-PQRS-TU1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\runtime">
+      <UniqueIdentifier>{K1L2M3N4-O5P6-7890-QRST-UV1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\solver">
+      <UniqueIdentifier>{L1M2N3O4-P5Q6-7890-RSTU-VW1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\tools">
+      <UniqueIdentifier>{M1N2O3P4-Q5R6-7890-STUV-WX1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\trainable">
+      <UniqueIdentifier>{N1O2P3Q4-R5S6-7890-TUVW-XY1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Include Files\ui">
+      <UniqueIdentifier>{O1P2Q3R4-S5T6-7890-UVWX-YZ1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\compairer">
+      <UniqueIdentifier>{P1Q2R3S4-T5U6-7890-VWXY-ZA1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\experimental">
+      <UniqueIdentifier>{Q1R2S3T4-U5V6-7890-WXYZ-AB1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\nodes">
+      <UniqueIdentifier>{R1S2T3U4-V5W6-7890-XYZA-BC1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\pybind">
+      <UniqueIdentifier>{S1T2U3V4-W5X6-7890-YZAB-CD1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ranges">
+      <UniqueIdentifier>{T1U2V3W4-X5Y6-7890-ZABC-DE1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\runtime">
+      <UniqueIdentifier>{U1V2W3X4-Y5Z6-7890-ABCD-EF1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\solver">
+      <UniqueIdentifier>{V1W2X3Y4-Z5A6-7890-BCDE-FG1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\tools">
+      <UniqueIdentifier>{W1X2Y3Z4-A5B6-7890-CDEF-GH1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\trainable">
+      <UniqueIdentifier>{X1Y2Z3A4-B5C6-7890-DEFG-HI1234567890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ui">
+      <UniqueIdentifier>{Y1Z2A3B4-C5D6-7890-EFGH-IJ1234567890}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Card.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Deck.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\GameTree.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\json.hpp">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\library.h">
+      <Filter>Include Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\compairer\Compairer.h">
+      <Filter>Include Files\compairer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\compairer\Dic5Compairer.h">
+      <Filter>Include Files\compairer</Filter>
+    </ClInclude>
+    <ClInclude Include="include\experimental\TCfrSolver.h">
+      <Filter>Include Files\experimental</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\ActionNode.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\ChanceNode.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\GameActions.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\GameTreeNode.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\ShowdownNode.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\nodes\TerminalNode.h">
+      <Filter>Include Files\nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ranges\PrivateCards.h">
+      <Filter>Include Files\ranges</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ranges\PrivateCardsManager.h">
+      <Filter>Include Files\ranges</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ranges\RiverCombs.h">
+      <Filter>Include Files\ranges</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ranges\RiverRangeManager.h">
+      <Filter>Include Files\ranges</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\PokerSolver.h">
+      <Filter>Include Files\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\runtime\qsolverjob.h">
+      <Filter>Include Files\runtime</Filter>
+    </ClInclude>
+    <ClInclude Include="include\solver\BestResponse.h">
+      <Filter>Include Files\solver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\solver\CfrSolver.h">
+      <Filter>Include Files\solver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\solver\PCfrSolver.h">
+      <Filter>Include Files\solver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\solver\Solver.h">
+      <Filter>Include Files\solver</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\argparse.hpp">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\CommandLineTool.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\GameTreeBuildingSettings.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\half-1-12-0.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\lookup8.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\PrivateRangeConverter.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\progressbar.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\qdebugstream.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\Rule.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\StreetSetting.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\tinyformat.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\tools\utils.h">
+      <Filter>Include Files\tools</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trainable\CfrPlusTrainable.h">
+      <Filter>Include Files\trainable</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trainable\DiscountedCfrTrainable.h">
+      <Filter>Include Files\trainable</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trainable\DiscountedCfrTrainableHF.h">
+      <Filter>Include Files\trainable</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trainable\DiscountedCfrTrainableSF.h">
+      <Filter>Include Files\trainable</Filter>
+    </ClInclude>
+    <ClInclude Include="include\trainable\Trainable.h">
+      <Filter>Include Files\trainable</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\boardselectortabledelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\boardselectortablemodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\detailitemdelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\detailviewermodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\detailwindowsetting.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\droptextedit.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\htmltablerangeview.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\rangeselectortabledelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\rangeselectortablemodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\roughstrategyitemdelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\roughstrategyviewermodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\strategyitemdelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\tablestrategymodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\treeitem.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\treemodel.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="include\ui\worditemdelegate.h">
+      <Filter>Include Files\ui</Filter>
+    </ClInclude>
+    <ClInclude Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qstextedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="qstreeview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="strategyexplorer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="htmltableview.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="rangeselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="boardselector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="settingeditor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Card.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Deck.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\console.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameTree.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\library.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\compairer\Dic5Compairer.cpp">
+      <Filter>Source Files\compairer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\experimental\TCfrSolver.cpp">
+      <Filter>Source Files\experimental</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\ActionNode.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\ChanceNode.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\GameActions.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\GameTreeNode.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\ShowdownNode.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\nodes\TerminalNode.cpp">
+      <Filter>Source Files\nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="src\pybind\bindSolver.cpp">
+      <Filter>Source Files\pybind</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ranges\PrivateCards.cpp">
+      <Filter>Source Files\ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ranges\PrivateCardsManager.cpp">
+      <Filter>Source Files\ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ranges\RiverCombs.cpp">
+      <Filter>Source Files\ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ranges\RiverRangeManager.cpp">
+      <Filter>Source Files\ranges</Filter>
+    </ClCompile>
+    <ClCompile Include="src\runtime\PokerSolver.cpp">
+      <Filter>Source Files\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="src\runtime\qsolverjob.cpp">
+      <Filter>Source Files\runtime</Filter>
+    </ClCompile>
+    <ClCompile Include="src\solver\BestResponse.cpp">
+      <Filter>Source Files\solver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\solver\CfrSolver.cpp">
+      <Filter>Source Files\solver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\solver\PCfrSolver.cpp">
+      <Filter>Source Files\solver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\solver\Solver.cpp">
+      <Filter>Source Files\solver</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\CommandLineTool.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\GameTreeBuildingSettings.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\lookup8.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\PrivateRangeConverter.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\progressbar.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\Rule.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\StreetSetting.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tools\utils.cpp">
+      <Filter>Source Files\tools</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainable\CfrPlusTrainable.cpp">
+      <Filter>Source Files\trainable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainable\DiscountedCfrTrainable.cpp">
+      <Filter>Source Files\trainable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainable\DiscountedCfrTrainableHF.cpp">
+      <Filter>Source Files\trainable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainable\DiscountedCfrTrainableSF.cpp">
+      <Filter>Source Files\trainable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\trainable\Trainable.cpp">
+      <Filter>Source Files\trainable</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\boardselectortabledelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\boardselectortablemodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\detailitemdelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\detailviewermodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\detailwindowsetting.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\droptextedit.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\htmltablerangeview.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\rangeselectortabledelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\rangeselectortablemodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\roughstrategyitemdelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\roughstrategyviewermodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\strategyitemdelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\tablestrategymodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\treeitem.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\treemodel.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ui\worditemdelegate.cpp">
+      <Filter>Source Files\ui</Filter>
+    </ClCompile>
+    <ClCompile Include="qstextedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="strategyexplorer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="qstreeview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="htmltableview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rangeselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="boardselector.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="settingeditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qstextedit.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="strategyexplorer.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="qstreeview.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="htmltableview.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="rangeselector.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="boardselector.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="settingeditor.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\runtime\qsolverjob.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\treemodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\worditemdelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\tablestrategymodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\strategyitemdelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\detailviewermodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\detailitemdelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\roughstrategyviewermodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\roughstrategyitemdelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\droptextedit.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\htmltablerangeview.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\rangeselectortablemodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\rangeselectortabledelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\boardselectortablemodel.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+    <QtMoc Include="include\ui\boardselectortabledelegate.h">
+      <Filter>Qt Files\Generated Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Qt Files\Forms</Filter>
+    </QtUic>
+    <QtUic Include="strategyexplorer.ui">
+      <Filter>Qt Files\Forms</Filter>
+    </QtUic>
+    <QtUic Include="rangeselector.ui">
+      <Filter>Qt Files\Forms</Filter>
+    </QtUic>
+    <QtUic Include="boardselector.ui">
+      <Filter>Qt Files\Forms</Filter>
+    </QtUic>
+    <QtUic Include="settingeditor.ui">
+      <Filter>Qt Files\Forms</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="translations.qrc">
+      <Filter>Qt Files\Resources</Filter>
+    </QtRcc>
+    <QtRcc Include="compairer.qrc">
+      <Filter>Qt Files\Resources</Filter>
+    </QtRcc>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TexasSolverGui_resource.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lang_cn.ts">
+      <Filter>Qt Files\Translations</Filter>
+    </None>
+    <None Include="lang_en.ts">
+      <Filter>Qt Files\Translations</Filter>
+    </None>
+  </ItemGroup>
+</Project>

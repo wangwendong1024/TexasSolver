@@ -13,10 +13,9 @@
 #include <include/trainable/DiscountedCfrTrainable.h>
 #include "include/solver/Solver.h"
 #include <omp.h>
-#include "include/tools/lookup8.h"
-#include "include/tools/utils.h"
+#include <include/tools/lookup8.h>
+#include <include/tools/utils.h>
 #include <queue>
-#include <optional>
 /*
 template<typename T>
 class ThreadsafeQueue {

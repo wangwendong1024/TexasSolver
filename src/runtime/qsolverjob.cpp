@@ -43,7 +43,7 @@ void QSolverJob::run()
 void QSolverJob::loading(){
     string suits = "c,d,h,s";
     string ranks;
-    this->resource_dir =  ":/resources";
+    this->resource_dir =  "./resources";
     string compairer_file, compairer_file_bin;
     int lines;
     qDebug().noquote() << tr("Loading holdem compairing file");//.toStdString() << endl;

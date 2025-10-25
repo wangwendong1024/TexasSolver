@@ -9,7 +9,7 @@
 #include <utility>
 #include <vector>
 #include <include/Card.h>
-#include "include/tools/tinyformat.h"
+#include <include/tools/tinyformat.h>
 
 class Compairer {
 public:

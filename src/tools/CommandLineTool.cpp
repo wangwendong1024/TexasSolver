@@ -127,16 +127,22 @@ void CommandLineTool::processCommand(string input) {
         string round = params[1];
         string bet_type = params[2];
         StreetSetting& streetSetting = this->gtbs->get_setting(player,round);
-        vector<float>* sizes;
-        if(bet_type == "allin") streetSetting.allin = true;
-        else if(bet_type == "bet") sizes = &(streetSetting.bet_sizes);
-        else if(bet_type == "raise") sizes = &(streetSetting.raise_sizes);
-        else if(bet_type == "donk") sizes = &(streetSetting.donk_sizes);
-        else throw runtime_error("");
+        vector<float>* sizes = nullptr;
+        if(bet_type == "allin") {
+            streetSetting.allin = true;
+        } else if(bet_type == "bet") {
+            sizes = &(streetSetting.bet_sizes);
+        } else if(bet_type == "raise") {
+            sizes = &(streetSetting.raise_sizes);
+        } else if(bet_type == "donk") {
+            sizes = &(streetSetting.donk_sizes);
+        } else {
+            throw runtime_error("");
+        }
 
-        if(bet_type == "bet" || bet_type == "raise" || bet_type == "donk"){
+        if(sizes != nullptr) {
             sizes->clear();
-            for(std::size_t i = 3;i < params.size();i ++ ){
+            for(std::size_t i = 3; i < params.size(); i++) {
                 sizes->push_back(stof(params[i]));
             }
         }

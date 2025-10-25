@@ -1,0 +1,28 @@
+set_pot 100
+set_effective_stack 1000
+set_board As,Kh,Qd
+set_range_oop AA,KK,QQ,JJ,TT,99,88,77,66,55,44,33,22,AK,AQ,AJ,AT,A9,A8,A7,A6,A5,A4,A3,A2,KQ,KJ,KT,K9,K8,K7,K6,K5,K4,K3,K2,QJ,QT,Q9,Q8,Q7,Q6,Q5,Q4,Q3,Q2,JT,J9,J8,J7,J6,J5,J4,J3,J2,T9,T8,T7,T6,T5,T4,T3,T2,98,97,96,95,94,93,92,87,86,85,84,83,82,76,75,74,73,72,65,64,63,62,54,53,52,43,42,32
+set_range_ip AA,KK,QQ,JJ,TT,99,88,77,66,55,44,33,22,AK,AQ,AJ,AT,A9,A8,A7,A6,A5,A4,A3,A2,KQ,KJ,KT,K9,K8,K7,K6,K5,K4,K3,K2,QJ,QT,Q9,Q8,Q7,Q6,Q5,Q4,Q3,Q2,JT,J9,J8,J7,J6,J5,J4,J3,J2,T9,T8,T7,T6,T5,T4,T3,T2,98,97,96,95,94,93,92,87,86,85,84,83,82,76,75,74,73,72,65,64,63,62,54,53,52,43,42,32
+set_bet_sizes oop,flop,bet, 0.5,1.0,2.0
+set_bet_sizes oop,flop,raise, 0.5,1.0,2.0
+set_bet_sizes ip,flop,bet, 0.5,1.0,2.0
+set_bet_sizes ip,flop,raise, 0.5,1.0,2.0
+set_bet_sizes oop,turn,bet, 0.5,1.0,2.0
+set_bet_sizes oop,turn,raise, 0.5,1.0,2.0
+set_bet_sizes ip,turn,bet, 0.5,1.0,2.0
+set_bet_sizes ip,turn,raise, 0.5,1.0,2.0
+set_bet_sizes oop,river,bet, 0.5,1.0,2.0
+set_bet_sizes oop,river,raise, 0.5,1.0,2.0
+set_bet_sizes ip,river,bet, 0.5,1.0,2.0
+set_bet_sizes ip,river,raise, 0.5,1.0,2.0
+set_allin_threshold 0.1
+set_raise_limit 3
+build_tree
+set_thread_num 4
+set_accuracy 0.01
+set_max_iteration 1000
+set_print_interval 100
+set_use_isomorphism 1
+start_solve
+set_dump_rounds 2
+dump_result output_result.json

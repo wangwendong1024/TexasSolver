@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <ProjectGuid>{A1B2C3D4-E5F6-7890-ABCD-EF1234567890}</ProjectGuid>
+    <Keyword>Qt5VS_v301</Keyword>
+    <RootNamespace>TexasSolverGui</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <LinkIncremental>true</LinkIncremental>
+    <QtInstall>$(QTDIR)</QtInstall>
+    <QtInstallTest>exists($(QTDIR)\bin\qmake.exe)</QtInstallTest>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <LinkIncremental>false</LinkIncremental>
+    <QtInstall>$(QTDIR)</QtInstall>
+    <QtInstallTest>exists($(QTDIR)\bin\qmake.exe)</QtInstallTest>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)debug\</OutDir>
+    <IntDir>$(SolutionDir)debug\</IntDir>
+    <TargetName>TexasSolverGui</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)release\</OutDir>
+    <IntDir>$(SolutionDir)release\</IntDir>
+    <TargetName>TexasSolverGui</TargetName>
+    <TargetExt>.exe</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\include;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtCore;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtGui;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtWidgets;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtANGLE;$(ProjectDir)include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;TEXASSOLVERGUI_LIBRARY;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <OpenMPSupport>true</OpenMPSupport>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\include;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtCore;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtGui;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtWidgets;C:\qt\pc_5.15\5.15.0\msvc2019_64\include\QtANGLE;$(ProjectDir)include;$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;TEXASSOLVERGUI_LIBRARY;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <OpenMPSupport>true</OpenMPSupport>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Card.h" />
+    <ClInclude Include="include\Deck.h" />
+    <ClInclude Include="include\GameTree.h" />
+    <ClInclude Include="include\json.hpp" />
+    <ClInclude Include="include\library.h" />
+    <ClInclude Include="include\compairer\Compairer.h" />
+    <ClInclude Include="include\compairer\Dic5Compairer.h" />
+    <ClInclude Include="include\experimental\TCfrSolver.h" />
+    <ClInclude Include="include\nodes\ActionNode.h" />
+    <ClInclude Include="include\nodes\ChanceNode.h" />
+    <ClInclude Include="include\nodes\GameActions.h" />
+    <ClInclude Include="include\nodes\GameTreeNode.h" />
+    <ClInclude Include="include\nodes\ShowdownNode.h" />
+    <ClInclude Include="include\nodes\TerminalNode.h" />
+    <ClInclude Include="include\ranges\PrivateCards.h" />
+    <ClInclude Include="include\ranges\PrivateCardsManager.h" />
+    <ClInclude Include="include\ranges\RiverCombs.h" />
+    <ClInclude Include="include\ranges\RiverRangeManager.h" />
+    <ClInclude Include="include\runtime\PokerSolver.h" />
+    <ClInclude Include="include\runtime\qsolverjob.h" />
+    <ClInclude Include="include\solver\BestResponse.h" />
+    <ClInclude Include="include\solver\CfrSolver.h" />
+    <ClInclude Include="include\solver\PCfrSolver.h" />
+    <ClInclude Include="include\solver\Solver.h" />
+    <ClInclude Include="include\tools\argparse.hpp" />
+    <ClInclude Include="include\tools\CommandLineTool.h" />
+    <ClInclude Include="include\tools\GameTreeBuildingSettings.h" />
+    <ClInclude Include="include\tools\half-1-12-0.h" />
+    <ClInclude Include="include\tools\lookup8.h" />
+    <ClInclude Include="include\tools\PrivateRangeConverter.h" />
+    <ClInclude Include="include\tools\progressbar.h" />
+    <ClInclude Include="include\tools\qdebugstream.h" />
+    <ClInclude Include="include\tools\Rule.h" />
+    <ClInclude Include="include\tools\StreetSetting.h" />
+    <ClInclude Include="include\tools\tinyformat.h" />
+    <ClInclude Include="include\tools\utils.h" />
+    <ClInclude Include="include\trainable\CfrPlusTrainable.h" />
+    <ClInclude Include="include\trainable\DiscountedCfrTrainable.h" />
+    <ClInclude Include="include\trainable\DiscountedCfrTrainableHF.h" />
+    <ClInclude Include="include\trainable\DiscountedCfrTrainableSF.h" />
+    <ClInclude Include="include\trainable\Trainable.h" />
+    <ClInclude Include="include\ui\boardselectortabledelegate.h" />
+    <ClInclude Include="include\ui\boardselectortablemodel.h" />
+    <ClInclude Include="include\ui\detailitemdelegate.h" />
+    <ClInclude Include="include\ui\detailviewermodel.h" />
+    <ClInclude Include="include\ui\detailwindowsetting.h" />
+    <ClInclude Include="include\ui\droptextedit.h" />
+    <ClInclude Include="include\ui\htmltablerangeview.h" />
+    <ClInclude Include="include\ui\rangeselectortabledelegate.h" />
+    <ClInclude Include="include\ui\rangeselectortablemodel.h" />
+    <ClInclude Include="include\ui\roughstrategyitemdelegate.h" />
+    <ClInclude Include="include\ui\roughstrategyviewermodel.h" />
+    <ClInclude Include="include\ui\strategyitemdelegate.h" />
+    <ClInclude Include="include\ui\tablestrategymodel.h" />
+    <ClInclude Include="include\ui\treeitem.h" />
+    <ClInclude Include="include\ui\treemodel.h" />
+    <ClInclude Include="include\ui\worditemdelegate.h" />
+    <ClInclude Include="mainwindow.h" />
+    <ClInclude Include="qstextedit.h" />
+    <ClInclude Include="qstreeview.h" />
+    <ClInclude Include="strategyexplorer.h" />
+    <ClInclude Include="htmltableview.h" />
+    <ClInclude Include="rangeselector.h" />
+    <ClInclude Include="boardselector.h" />
+    <ClInclude Include="settingeditor.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="src\Card.cpp" />
+    <ClCompile Include="src\Deck.cpp" />
+    <ClCompile Include="src\console.cpp" />
+    <ClCompile Include="src\GameTree.cpp" />
+    <ClCompile Include="src\library.cpp" />
+    <ClCompile Include="src\compairer\Dic5Compairer.cpp" />
+    <ClCompile Include="src\experimental\TCfrSolver.cpp" />
+    <ClCompile Include="src\nodes\ActionNode.cpp" />
+    <ClCompile Include="src\nodes\ChanceNode.cpp" />
+    <ClCompile Include="src\nodes\GameActions.cpp" />
+    <ClCompile Include="src\nodes\GameTreeNode.cpp" />
+    <ClCompile Include="src\nodes\ShowdownNode.cpp" />
+    <ClCompile Include="src\nodes\TerminalNode.cpp" />
+    <ClCompile Include="src\pybind\bindSolver.cpp" />
+    <ClCompile Include="src\ranges\PrivateCards.cpp" />
+    <ClCompile Include="src\ranges\PrivateCardsManager.cpp" />
+    <ClCompile Include="src\ranges\RiverCombs.cpp" />
+    <ClCompile Include="src\ranges\RiverRangeManager.cpp" />
+    <ClCompile Include="src\runtime\PokerSolver.cpp" />
+    <ClCompile Include="src\runtime\qsolverjob.cpp" />
+    <ClCompile Include="src\solver\BestResponse.cpp" />
+    <ClCompile Include="src\solver\CfrSolver.cpp" />
+    <ClCompile Include="src\solver\PCfrSolver.cpp" />
+    <ClCompile Include="src\solver\Solver.cpp" />
+    <ClCompile Include="src\tools\CommandLineTool.cpp" />
+    <ClCompile Include="src\tools\GameTreeBuildingSettings.cpp" />
+    <ClCompile Include="src\tools\lookup8.cpp" />
+    <ClCompile Include="src\tools\PrivateRangeConverter.cpp" />
+    <ClCompile Include="src\tools\progressbar.cpp" />
+    <ClCompile Include="src\tools\Rule.cpp" />
+    <ClCompile Include="src\tools\StreetSetting.cpp" />
+    <ClCompile Include="src\tools\utils.cpp" />
+    <ClCompile Include="src\trainable\CfrPlusTrainable.cpp" />
+    <ClCompile Include="src\trainable\DiscountedCfrTrainable.cpp" />
+    <ClCompile Include="src\trainable\DiscountedCfrTrainableHF.cpp" />
+    <ClCompile Include="src\trainable\DiscountedCfrTrainableSF.cpp" />
+    <ClCompile Include="src\trainable\Trainable.cpp" />
+    <ClCompile Include="src\ui\boardselectortabledelegate.cpp" />
+    <ClCompile Include="src\ui\boardselectortablemodel.cpp" />
+    <ClCompile Include="src\ui\detailitemdelegate.cpp" />
+    <ClCompile Include="src\ui\detailviewermodel.cpp" />
+    <ClCompile Include="src\ui\detailwindowsetting.cpp" />
+    <ClCompile Include="src\ui\droptextedit.cpp" />
+    <ClCompile Include="src\ui\htmltablerangeview.cpp" />
+    <ClCompile Include="src\ui\rangeselectortabledelegate.cpp" />
+    <ClCompile Include="src\ui\rangeselectortablemodel.cpp" />
+    <ClCompile Include="src\ui\roughstrategyitemdelegate.cpp" />
+    <ClCompile Include="src\ui\roughstrategyviewermodel.cpp" />
+    <ClCompile Include="src\ui\strategyitemdelegate.cpp" />
+    <ClCompile Include="src\ui\tablestrategymodel.cpp" />
+    <ClCompile Include="src\ui\treeitem.cpp" />
+    <ClCompile Include="src\ui\treemodel.cpp" />
+    <ClCompile Include="src\ui\worditemdelegate.cpp" />
+    <ClCompile Include="qstextedit.cpp" />
+    <ClCompile Include="strategyexplorer.cpp" />
+    <ClCompile Include="qstreeview.cpp" />
+    <ClCompile Include="htmltableview.cpp" />
+    <ClCompile Include="rangeselector.cpp" />
+    <ClCompile Include="boardselector.cpp" />
+    <ClCompile Include="settingeditor.cpp" />
+    <ClCompile Include="debug\moc_qsolverjob.cpp" />
+    <ClCompile Include="debug\moc_treemodel.cpp" />
+    <ClCompile Include="debug\moc_worditemdelegate.cpp" />
+    <ClCompile Include="debug\moc_tablestrategymodel.cpp" />
+    <ClCompile Include="debug\moc_strategyitemdelegate.cpp" />
+    <ClCompile Include="debug\moc_detailviewermodel.cpp" />
+    <ClCompile Include="debug\moc_detailitemdelegate.cpp" />
+    <ClCompile Include="debug\moc_roughstrategyviewermodel.cpp" />
+    <ClCompile Include="debug\moc_roughstrategyitemdelegate.cpp" />
+    <ClCompile Include="debug\moc_droptextedit.cpp" />
+    <ClCompile Include="debug\moc_htmltablerangeview.cpp" />
+    <ClCompile Include="debug\moc_rangeselectortablemodel.cpp" />
+    <ClCompile Include="debug\moc_rangeselectortabledelegate.cpp" />
+    <ClCompile Include="debug\moc_boardselectortablemodel.cpp" />
+    <ClCompile Include="debug\moc_boardselectortabledelegate.cpp" />
+    <ClCompile Include="debug\moc_mainwindow.cpp" />
+    <ClCompile Include="debug\moc_qstextedit.cpp" />
+    <ClCompile Include="debug\moc_strategyexplorer.cpp" />
+    <ClCompile Include="debug\moc_qstreeview.cpp" />
+    <ClCompile Include="debug\moc_htmltableview.cpp" />
+    <ClCompile Include="debug\moc_rangeselector.cpp" />
+    <ClCompile Include="debug\moc_boardselector.cpp" />
+    <ClCompile Include="debug\moc_settingeditor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="mainwindow.h" />
+    <QtMoc Include="qstextedit.h" />
+    <QtMoc Include="strategyexplorer.h" />
+    <QtMoc Include="qstreeview.h" />
+    <QtMoc Include="htmltableview.h" />
+    <QtMoc Include="rangeselector.h" />
+    <QtMoc Include="boardselector.h" />
+    <QtMoc Include="settingeditor.h" />
+    <QtMoc Include="include\runtime\qsolverjob.h" />
+    <QtMoc Include="include\ui\treemodel.h" />
+    <QtMoc Include="include\ui\worditemdelegate.h" />
+    <QtMoc Include="include\ui\tablestrategymodel.h" />
+    <QtMoc Include="include\ui\strategyitemdelegate.h" />
+    <QtMoc Include="include\ui\detailviewermodel.h" />
+    <QtMoc Include="include\ui\detailitemdelegate.h" />
+    <QtMoc Include="include\ui\roughstrategyviewermodel.h" />
+    <QtMoc Include="include\ui\roughstrategyitemdelegate.h" />
+    <QtMoc Include="include\ui\droptextedit.h" />
+    <QtMoc Include="include\ui\htmltablerangeview.h" />
+    <QtMoc Include="include\ui\rangeselectortablemodel.h" />
+    <QtMoc Include="include\ui\rangeselectortabledelegate.h" />
+    <QtMoc Include="include\ui\boardselectortablemodel.h" />
+    <QtMoc Include="include\ui\boardselectortabledelegate.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="mainwindow.ui" />
+    <QtUic Include="strategyexplorer.ui" />
+    <QtUic Include="rangeselector.ui" />
+    <QtUic Include="boardselector.ui" />
+    <QtUic Include="settingeditor.ui" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="translations.qrc" />
+    <QtRcc Include="compairer.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="TexasSolverGui_resource.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lang_cn.ts" />
+    <None Include="lang_en.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\compairer\card5_dic_sorted.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\compairer\card5_dic_sorted_shortdeck.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\compairer\card5_dic_zipped.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\compairer\card5_dic_zipped_shortdeck.bin">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="resources\bash\replace.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\bash\riversolver.sh">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\game_tree_flop.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\generated_tree.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\part_tree_depthinf.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\part_tree_turn_depthinf.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\part_tree_turn_withallin.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\gametree\simple_part_tree_depthinf.km">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\outputs\outputs_log.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\outputs\outputs_strategy.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\python\__init__.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\python\test.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\python\TreeBuilder.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\text\commandline_sample_input_shortdeck.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\text\commandline_sample_input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\general_rule.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_generated_game.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_holdem_simple.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_shortdeck_flopsolver.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_shortdeck_simple.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_shortdeck_turnriversolver.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_shortdeck_turnsolver_withallin.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="resources\yamls\rule_shortdeck_turnsolver.yaml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="parameters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="post_build_copy_resources.bat" />
+    <None Include="deploy_application.bat" />
+    <None Include="create_deployment_package.bat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="lang_cn.qm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="lang_en.qm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <PropertyGroup>
+    <QtInstall>$(QTDIR)</QtInstall>
+    <QtVersion>5.15.0</QtVersion>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Core.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Gui.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Widgets.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5WinExtras.dll" "$(OutDir)"
+xcopy "C:\qt\pc_5.15\5.15.0\msvc2019_64\plugins" "$(OutDir)plugins" /E /I /Y
+REM 复制resources文件夹
+if not exist "$(OutDir)resources" mkdir "$(OutDir)resources"
+if not exist "$(OutDir)resources\compairer" mkdir "$(OutDir)resources\compairer"
+copy /y "$(ProjectDir)resources\compairer\*.*" "$(OutDir)resources\compairer\"
+REM 创建parameters文件夹
+if not exist "$(OutDir)parameters" mkdir "$(OutDir)parameters"
+if exist "$(ProjectDir)parameters\*.*" copy /y "$(ProjectDir)parameters\*.*" "$(OutDir)parameters\"
+REM 复制翻译文件（项目自带的）
+copy /y "$(ProjectDir)lang_cn.qm" "$(OutDir)"
+copy /y "$(ProjectDir)lang_en.qm" "$(OutDir)"
+REM 复制ranges文件夹（如果存在）
+if exist "$(ProjectDir)ranges" xcopy "$(ProjectDir)ranges" "$(OutDir)ranges\" /E /I /Y
+REM 复制缺失的DLL文件
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\D3Dcompiler_47.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\libEGL.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\libGLESV2.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\opengl32sw.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\Qt5Svg.dll" "$(OutDir)" 2>nul
+REM 复制console_solver.exe（如果存在）
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\console_solver.exe" "$(OutDir)" 2>nul
+echo Resources, parameters, translations, ranges and missing DLLs copied successfully</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;Qt5WinExtras.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\qt\pc_5.15\5.15.0\msvc2019_64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Core.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Gui.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5Widgets.dll" "$(OutDir)"
+copy "C:\qt\pc_5.15\5.15.0\msvc2019_64\bin\Qt5WinExtras.dll" "$(OutDir)"
+xcopy "C:\qt\pc_5.15\5.15.0\msvc2019_64\plugins" "$(OutDir)plugins" /E /I /Y
+REM 复制resources文件夹
+if not exist "$(OutDir)resources" mkdir "$(OutDir)resources"
+if not exist "$(OutDir)resources\compairer" mkdir "$(OutDir)resources\compairer"
+copy /y "$(ProjectDir)resources\compairer\*.*" "$(OutDir)resources\compairer\"
+REM 创建parameters文件夹
+if not exist "$(OutDir)parameters" mkdir "$(OutDir)parameters"
+if exist "$(ProjectDir)parameters\*.*" copy /y "$(ProjectDir)parameters\*.*" "$(OutDir)parameters\"
+REM 复制翻译文件（项目自带的）
+copy /y "$(ProjectDir)lang_cn.qm" "$(OutDir)"
+copy /y "$(ProjectDir)lang_en.qm" "$(OutDir)"
+REM 复制ranges文件夹（如果存在）
+if exist "$(ProjectDir)ranges" xcopy "$(ProjectDir)ranges" "$(OutDir)ranges\" /E /I /Y
+REM 复制缺失的DLL文件
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\D3Dcompiler_47.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\libEGL.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\libGLESV2.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\opengl32sw.dll" "$(OutDir)" 2>nul
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\Qt5Svg.dll" "$(OutDir)" 2>nul
+REM 复制console_solver.exe（如果存在）
+copy "C:\Users\Administrator\Downloads\TexasSolver-v0.2.0-Windows\console_solver.exe" "$(OutDir)" 2>nul
+echo Resources, parameters, translations, ranges and missing DLLs copied successfully</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+</Project>

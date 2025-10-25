@@ -11,6 +11,9 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = TexasSolverGui
 TEMPLATE = app
 
+# Set C++17 standard for Qt 6
+CONFIG += c++17
+
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings
 # depend on your compiler). Please consult the documentation of the
@@ -200,3 +203,13 @@ FORMS += \
 RESOURCES += \
     translations.qrc \
     compairer.qrc
+
+# 复制resources文件夹到输出目录
+win32 {
+    # 创建输出目录
+    QMAKE_POST_LINK += $$quote(mkdir /q $$shell_path($$DESTDIR)resources) $$escape_expand(\\n\\t)
+    QMAKE_POST_LINK += $$quote(mkdir /q $$shell_path($$DESTDIR)resources\\compairer) $$escape_expand(\\n\\t)
+    
+    # 复制文件
+    QMAKE_POST_LINK += $$quote(copy /y $$shell_path($$PWD/resources/compairer/*.*) $$shell_path($$DESTDIR)resources\\compairer\\) $$escape_expand(\\n\\t)
+}
